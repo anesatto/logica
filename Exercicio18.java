@@ -63,6 +63,7 @@ public class Exercicio18 {
 			double salarioMinimo = 450.00;
 			
 			 //escreva seu código aqui
+		}
 
 		input.close();
 	} 
