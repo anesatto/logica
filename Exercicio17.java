@@ -17,8 +17,20 @@ public class Exercicio17 {
 		quadrado = Math.pow(num, 2);
 		cubo = Math.pow(num, 3);
 		raiz = Math.sqrt(num);
-		
-		//escreva seu código aqui
+	
+        while (num > 0) {
+            quadrado = Math.pow(num, 2);
+            cubo = Math.pow(num, 3);
+            raiz = Math.sqrt(num);
+            
+            System.out.printf("Quadrado: %.2f\n", quadrado);
+            System.out.printf("Cubo:     %.2f\n", cubo);
+            System.out.printf("Raiz:     %.2f\n", raiz);
+            System.out.print("Digite o próximo número (ou 0/negativo para sair): ");
+            num = input.nextInt();
+        }
+
+        System.out.println("Programa finalizado. Até a próxima!");
 			
 		input.close();
 	}

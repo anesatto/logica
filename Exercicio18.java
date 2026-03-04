@@ -58,11 +58,43 @@ public class Exercicio18 {
 					System.out.println("Categoria inválida"); }
 			}
 			
-			
-			
 			double salarioMinimo = 450.00;
 			
-			 //escreva seu código aqui
+			System.out.print("Digite o número de horas trabalhadas no mês: ");
+            horasTrabalhadas = input.nextInt();
+
+          
+            if (categoria == 'G') {
+                if (turno == 'N') {
+                    valorHora = salarioMinimo * 0.18;
+                } else { 
+                    valorHora = salarioMinimo * 0.15;
+                }
+            } else { 
+                if (turno == 'N') {
+                    valorHora = salarioMinimo * 0.13;
+                } else { 
+                    valorHora = salarioMinimo * 0.10;
+                }
+            }
+    
+            salarioInicial = horasTrabalhadas * valorHora;
+    
+            if (salarioInicial <= 300) {
+                auxilioAlimentacao = salarioInicial * 0.20;
+            } else if (salarioInicial <= 600) {
+                auxilioAlimentacao = salarioInicial * 0.15;
+            } else {
+                auxilioAlimentacao = salarioInicial * 0.05;
+            }
+
+            double salarioFinal = salarioInicial + auxilioAlimentacao;
+            
+            System.out.printf("Horas trabalhadas: %d\n", horasTrabalhadas);
+            System.out.printf("Valor da hora:     R$ %.2f\n", valorHora);
+            System.out.printf("Salário inicial:   R$ %.2f\n", salarioInicial);
+            System.out.printf("Auxílio-Alim.:     R$ %.2f\n", auxilioAlimentacao);
+            System.out.printf("SALÁRIO FINAL:     R$ %.2f\n", salarioFinal);
 		}
 
 		input.close();

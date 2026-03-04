@@ -8,7 +8,20 @@ public class Exercicio8 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in); 
 
-		 //escreva seu código aqui
+        int quantidade;
+        double custoTotal;
+
+        System.out.print("Digite o número de maçãs compradas: ");
+        quantidade = input.nextInt();
+
+        if (quantidade < 12) {
+            custoTotal = quantidade * 0.30;
+        } else {
+            custoTotal = quantidade * 0.25;
+        }
+
+        System.out.println("Quantidade: " + quantidade + " unidades");
+        System.out.printf("Custo total da compra: R$ %.2f\n", custoTotal);
 
 		input.close();
 	}
